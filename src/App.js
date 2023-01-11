@@ -1,9 +1,15 @@
 import './App.css';
+import { useState } from 'react';
+import { GptLayer } from './components/gptLayer/gptLayer';
+import { UserLayer } from './components/userLayer/userLayer';
 
 function App() {
+  const [messageListe, setMessageListe] = useState([])
+
   return (
     <div className="App">
-      <h1>Let's begin the show!</h1>
+      <GptLayer messageListe={messageListe}/>
+      <UserLayer />
     </div>
   );
 }
